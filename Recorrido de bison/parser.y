@@ -62,7 +62,7 @@ S1 : S2 S3 pcoma{std::cout<<"aceptada"<<std::endl;};
 
 S2 : Id {std::cout<<"Paso1"<<std::endl;};
 
-S3 :{std::cout<<"otro"<<std::endl;} S3 {std::cout<<"Paso3"<<std::endl;} coma {std::cout<<"Paso4"<<std::endl;} Id{std::cout<<"Paso5"<<std::endl;}
+S3 : S3 {std::cout<<"Paso3"<<std::endl;} coma {std::cout<<"Paso4"<<std::endl;} Id{std::cout<<"Paso5"<<std::endl;}
 	|Id{std::cout<<"Paso2"<<std::endl; }
 
 %%
